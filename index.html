@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Age calculator app</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  
+  <main>
+    <div class="inputs">
+      <div>
+        <label for="day">Day</label>
+        <input type="number" name="day" id="day" placeholder="DD" max="31">
+        <span class="message-invalid"  style="display: none;">This field is required</span>
+        <span class="invalid_date" id="invalid_1" style="display: none;">Must be a valid day</span>
+      </div>
+      <div>
+        <label for="month">Month</label>
+        <input type="number" name="month" id="month" placeholder="MM" max="12">
+        <span class="message-invalid"  style="display: none;">This field is required</span>
+        <span class="invalid_date" id="invalid_2" style="display: none;">Must be a valid month</span>
+      </div>
+      <div>
+        <label for="year">Year</label>
+        <input type="number" name="year" id="year" placeholder="YYYY" max="9999">
+        <span class="message-invalid"  style="display: none;">This field is required</span>
+        <span class="invalid_date" id="invalid_3" style="display: none;">Must be in the past</span>
+      </div>
+    </div>
+
+    <div class="img-container">
+      <button onclick="calc_date()" ><img src="assets/images/icon-arrow.svg" alt="run arrow"></button>
+      <hr>
+    </div>
+
+    <div>
+      <p><span class="value" id="total_years">--</span> years</p>
+      <p><span class="value" id="total_months">--</span> months</p>
+      <p><span class="value" id="total_days">--</span> days</p>
+    </div>
+</main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="http://github.com/liedsonfranco">Liedson Franco</a>.
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+@font-face {
+    font-family: Poppins ;
+    src: url(assets/fonts/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: Poppins_bold;
+    src: url(assets/fonts/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: Poppins_bold_italic;
+    src: url(assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 86%);
+    height: 97vh;
+    margin: 0;
+    font-family: Poppins;
+}
+
+main{
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    border-bottom-right-radius: 100px;
+    max-width: 350px;
+}
+p{
+    font-size: 40px;
+    font-family: Poppins_bold_italic;
+    margin: 0;
+}
+input{
+    font-size: 20px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid hsl(0, 0%, 94%);
+    border-radius: 5px;
+    margin: 0;
+    font-family: Poppins_bold
+}
+label{
+    text-transform: uppercase;
+    color: hsl(0, 1%, 44%);
+}
+hr{
+    border: 1px solid hsl(0, 0%, 94%);
+}
+.value{
+    color:hsl(259, 100%, 65%);
+}
+.img-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    position: relative;
+}
+.img-container hr{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+.img-container img{
+    width: 25px;
+    z-index: 2;
+}
+.img-container button{
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background-color: hsl(259, 100%, 65%);
+    border-radius: 50%;
+    transition: .5s;
+    border: none;
+}
+.img-container button:hover{
+    background-color: hsl(0, 0%, 8%);
+    cursor: pointer;
+}
+.invalid-inputs input{
+    border: 1px solid hsl(0, 100%, 67%);
+}
+.invalid-inputs, .message-invalid,.invalid-inputs label{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: hsl(0, 100%, 67%);
+}
+.inputs,.invalid-inputs{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+}
+.inputs span{
+    display:none;
+}
+
+@media only screen and (min-width: 600px) {
+    main{
+        max-width: 650px;
+    }
+    p{
+        font-size: 60px;
+    }
+    .img-container{
+        justify-content: right;
+    }
+    .inputs,.invalid-inputs{
+        width: 75%;
+        display:grid;
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+    }
+}
